@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Reportes y Estadísticas | Clinik Dent</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/templatemo-style.css" rel="stylesheet"/>
+<style>
+        body { background: #f7f9fb; }
+        .dashboard-box { background: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); padding: 30px; margin-top: 40px; }
+        .dashboard-header { margin-bottom: 30px; text-align: center; }
+        .chart-container { width: 100%; max-width: 600px; margin: 0 auto 40px; }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/><style>
+        .modal-content {
+            background-color: #f9f9f9 !important;
+        }
+        .tab-pane, .form-control, .modal-content, label {
+            color: #212529 !important;
+        }
+        .modal {
+            z-index: 1055 !important;
+        }
+        </style></head>
+<body>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="dashboard-admin.html">Clinik Dent</a>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="index.html"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<div class="dashboard-box">
+<div class="dashboard-header">
+<a class="btn btn-default" href="dashboard-admin.html" style="float:right;margin-bottom:10px;"><i class="fa fa-arrow-left"></i> Volver al panel</a>
+<h2>Reportes y Estadísticas</h2>
+<p>Visualiza el resumen de la gestión de la clínica.</p>
+</div>
+<div class="chart-container">
+<canvas id="citasPorEstado"></canvas>
+</div>
+<div class="chart-container">
+<canvas id="citasPorOdontologo"></canvas>
+</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module">
+    document.addEventListener('DOMContentLoaded', function() {
+        const logoutLink = document.querySelector('a[href="index.html"]');
+        if (logoutLink) {
+            logoutLink.addEventListener('click', async function(e) {
+                e.preventDefault();
+                try {
+                    const { getAuth, signOut } = await import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js');
+                    const auth = getAuth();
+                    await signOut(auth);
+                } catch (e) {}
+                sessionStorage.clear();
+                localStorage.clear();
+                window.location.replace('index.html');
+                window.history.pushState(null, '', window.location.href);
+                window.onpopstate = function() {
+                    window.location.replace('index.html');
+                };
+            });
+        }
+    });
+    </script>
+<script src="js/admin-reportes.js" type="module"></script>
+<div class="modal-backdrop fade show"></div></body>
+</html>

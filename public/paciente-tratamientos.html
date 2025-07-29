@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Mis Tratamientos | Clinik Dent</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/templatemo-style.css" rel="stylesheet"/>
+<style>
+        body { background: #f7f9fb; }
+        .dashboard-box { background: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); padding: 30px; margin-top: 40px; }
+        .dashboard-header { margin-bottom: 30px; text-align: center; }
+        .table th, .table td { vertical-align: middle !important; text-align: center; }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/><style>
+        .modal-content {
+            background-color: #f9f9f9 !important;
+        }
+        .tab-pane, .form-control, .modal-content, label {
+            color: #212529 !important;
+        }
+        .modal {
+            z-index: 1055 !important;
+        }
+        </style></head>
+<body>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="dashboard-paciente.html">Clinik Dent</a>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="index.html"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<div class="dashboard-box">
+<div class="dashboard-header">
+<a class="btn btn-default" href="dashboard-paciente.html" style="float:right;margin-bottom:10px;"><i class="fa fa-arrow-left"></i> Volver</a>
+<h2>Mis Tratamientos</h2>
+<p>Revisa el estado y detalles de tus tratamientos.</p>
+</div>
+<table class="table table-bordered" id="tabla-tratamientos-paciente">
+<thead>
+<tr><th>Tratamiento</th><th>Estado</th><th>Odontólogo</th><th>Fecha inicio</th><th>Fecha fin</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/paciente-tratamientos.js" type="module"></script>
+<div class="modal-backdrop fade show"></div></body>
+</html>

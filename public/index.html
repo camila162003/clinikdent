@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<title>Clinik Dent - Odontología Integral en Bogotá</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="Clinik Dent - Tu clínica odontológica en Bogotá. Ofrecemos tratamientos dentales integrales con tecnología de punta y profesionales calificados." name="description"/>
+<meta content="odontología, dentista Bogotá, implantes dentales, ortodoncia, blanqueamiento dental, urgencias dentales" name="keywords"/>
+<meta content="Clinik Dent" name="author"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+<meta content="#00a3e1" name="theme-color"/>
+<!-- Open Graph / Social Media -->
+<meta content="Clinik Dent - Odontología Integral en Bogotá" property="og:title"/>
+<meta content="Tu clínica odontológica en Bogotá. Tratamientos dentales con tecnología de punta y profesionales calificados." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.clinikdent.com" property="og:url"/>
+<meta content="https://www.clinikdent.com/images/social-share.jpg" property="og:image"/>
+<!-- Favicon y iconos -->
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="images/logo"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<!-- Hojas de estilo -->
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/owl.carousel.min.css" rel="stylesheet"/>
+<link href="css/owl.theme.default.min.css" rel="stylesheet"/>
+<!-- MAIN CSS -->
+<link href="css/templatemo-style.css" rel="stylesheet"/>
+<!-- Estilos personalizados -->
+<style>
+        :root {
+            --primary-color: #00a3e1;
+            --secondary-color: #0077b6;
+            --accent-color: #ff6b35;
+            --light-color: #f7f9fb;
+            --dark-color: #2a2a2a;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-color);
+        }
+        
+        .navbar-brand {
+            font-weight: 500;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .section-title h2 {
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .feature-thumb {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-thumb:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .promo-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        footer a {
+            color: #ccc;
+        }
+        
+        footer a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .social-icon li a {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            text-align: center;
+            line-height: 36px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon li a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .whatsapp-float, .facebook-float, .instagram-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float {
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+        }
+        .facebook-float {
+            bottom: 100px;
+            right: 30px;
+            background-color: #1877f3;
+        }
+        .instagram-float {
+            bottom: 170px;
+            right: 30px;
+            background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+        .whatsapp-float:hover, .facebook-float:hover, .instagram-float:hover {
+            transform: scale(1.1);
+            color: white;
+            filter: brightness(1.1);
+        }
+        
+        .login-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        .login-tabs .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        
+        .login-tabs .nav-link.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .news-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .news-date {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/><style>
+        .modal-content {
+            background-color: #f9f9f9 !important;
+        }
+        .tab-pane, .form-control, .modal-content, label {
+            color: #212529 !important;
+        }
+        .modal {
+            z-index: 1055 !important;
+        }
+        </style></head>
+<body data-offset="50" data-spy="scroll" data-target=".navbar-collapse" id="top">
+<!-- PRE LOADER -->
+<section aria-hidden="true" class="preloader">
+<div class="spinner">
+<span class="spinner-rotate"></span>
+</div>
+</section>
+<!-- MENU -->
+<nav aria-label="Navegación principal" class="navbar custom-navbar navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header" style="position: relative; min-height: 70px;">
+<a aria-label="Clinik Dent - Inicio" class="navbar-brand" href="#" style="float: left;">
+<img alt="Clinik Dent Logo" class="d-inline-block align-top" height="70" src="images/logo.jpg" style="max-width:140px;"/>
+</a>
+<button aria-expanded="false" aria-label="Alternar navegación" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+<span aria-hidden="true" class="icon icon-bar"></span>
+<span aria-hidden="true" class="icon icon-bar"></span>
+<span aria-hidden="true" class="icon icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav navbar-nav-first">
+<li><a aria-current="page" class="smoothScroll" href="#top">Inicio</a></li>
+<li><a class="smoothScroll" href="#services">Servicios</a></li>
+<li><a class="smoothScroll" href="#team">Nuestro Equipo</a></li>
+<li><a class="smoothScroll" href="#testimonials">Pacientes</a></li>
+<li><a class="smoothScroll" href="#news">Noticias</a></li>
+<li><a class="smoothScroll" href="#contact">Contacto</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a data-target="#loginModal" data-toggle="modal" href="#loginModal"><i aria-hidden="true" class="fa fa-user"></i> Iniciar Sesión</a></li>
+<li><a data-target="#registerModal" data-toggle="modal" href="#registerModal"><i aria-hidden="true" class="fa fa-user-plus"></i> Registrarse</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- HOME (sección de carrusel eliminada para quitar el espacio en blanco) -->
+<!-- Botones flotantes -->
+<a aria-label="WhatsApp Clinik Dent" class="whatsapp-float" href="https://wa.me/573001234567" target="_blank">
+<i class="fa fa-whatsapp"></i>
+</a>
+<a aria-label="Facebook Clinik Dent" class="facebook-float" href="https://facebook.com/clinikdent" target="_blank">
+<i class="fa fa-facebook"></i>
+</a>
+<a aria-label="Instagram Clinik Dent" class="instagram-float" href="https://instagram.com/clinikdent" target="_blank">
+<i class="fa fa-instagram"></i>
+</a>
+<!-- Puedes agregar aquí un contenido más compacto si lo deseas. -->
+<!-- CARRUSEL DE SERVICIOS DESTACADOS -->
+<div class="carousel slide" data-ride="carousel" id="serviciosCarousel" style="margin-top:70px;">
+<ol class="carousel-indicators">
+<li class="active" data-slide-to="0" data-target="#serviciosCarousel"></li>
+<li data-slide-to="1" data-target="#serviciosCarousel"></li>
+<li data-slide-to="2" data-target="#serviciosCarousel"></li>
+</ol>
+<div class="carousel-inner">
+<div class="item active">
+<img alt="Odontología General 3D" src="images/service1.jpg" style="width:100%;max-height:340px;object-fit:cover;border-radius:18px;"/>
+<div class="carousel-caption">
+<h3>Odontología General</h3>
+<p>Revisiones, limpiezas y tratamientos preventivos con tecnología de punta.</p>
+</div>
+</div>
+<div class="item">
+<img alt="Ortodoncia 3D" src="images/service2.jpg" style="width:100%;max-height:340px;object-fit:cover;border-radius:18px;"/>
+<div class="carousel-caption">
+<h3>Ortodoncia Avanzada</h3>
+<p>Brackets, alineadores y simulaciones 3D para tu mejor sonrisa.</p>
+</div>
+</div>
+<div class="item">
+<img alt="Implantes 3D" src="images/service3.jpg" style="width:100%;max-height:340px;object-fit:cover;border-radius:18px;"/>
+<div class="carousel-caption">
+<h3>Implantes Dentales</h3>
+<p>Implantes digitales y restauraciones guiadas por imágenes 3D.</p>
+</div>
+</div>
+</div>
+<a class="left carousel-control" data-slide="prev" href="#serviciosCarousel">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" data-slide="next" href="#serviciosCarousel">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+<script>
+     $(document).ready(function(){
+         $('#serviciosCarousel').carousel({
+             interval: 4000
+         });
+     });
+     </script>
+<!-- FEATURE -->
+<section id="feature">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4">
+<div class="feature-thumb">
+<span><i class="fa fa-clock-o"></i></span>
+<h3>Horario Extendido</h3>
+<p>Atendemos de lunes a sábado de 8:00 am a 8:00 pm y urgencias las 24 horas.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="feature-thumb">
+<span><i class="fa fa-credit-card"></i></span>
+<h3>Facilidades de Pago</h3>
+<p>Aceptamos todos los seguros odontológicos y ofrecemos planes de financiación.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="feature-thumb">
+<span><i class="fa fa-medkit"></i></span>
+<h3>Tecnología de Punta</h3>
+<p>Contamos con equipos digitales de última generación para diagnósticos precisos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICIOS -->
+<section class="section-bg" id="services">
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="section-title">
+<h2>Nuestros Servicios <small>Tratamientos dentales especializados</small></h2>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="service-card">
+<img alt="Odontología General" class="img-responsive" loading="lazy" src="images/service1.jpg"/>
+<div class="service-detail">
+<h3>Odontología General</h3>
+<p>Revisiones, limpiezas, empastes y tratamientos preventivos para mantener tu salud bucal.</p>
+<a class="btn btn-primary scroll-to-contact" href="#contact">Más información</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="service-card">
+<div class="promo-badge">Promoción</div>
+<img alt="Ortodoncia" class="img-responsive" loading="lazy" src="images/service2.jpg"/>
+<div class="service-detail">
+<h3>Ortodoncia</h3>
+<p>Brackets metálicos, estéticos e invisalign para corregir la posición de tus dientes.</p>
+<a class="btn btn-primary scroll-to-contact" href="#contact">Más información</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="service-card">
+<img alt="Cirugía Oral" class="img-responsive" loading="lazy" src="images/service3.jpg"/>
+<div class="service-detail">
+<h3>Cirugía Oral</h3>
+<p>Extracciones complejas, implantes dentales y tratamientos quirúrgicos especializados.</p>
+<a class="btn btn-primary scroll-to-contact" href="#contact">Más información</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="service-card">
+<img alt="Urgencias Odontológicas" class="img-responsive" loading="lazy" src="images/service4.jpg"/>
+<div class="service-detail">
+<h3>Urgencias Odontológicas</h3>
+<p>Atención inmediata para dolores agudos, fracturas dentales y traumatismos.</p>
+<a class="btn btn-primary scroll-to-contact" href="#contact">Más información</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="service-card">
+<div class="promo-badge">Nuevo</div>
+<img alt="Estética Dental" class="img-responsive" loading="lazy" src="images/service5.jpg"/>
+<div class="service-detail">
+<h3>Estética Dental</h3>
+<p>Blanqueamientos, carillas y coronas para una sonrisa perfecta y natural.</p>
+<a class="btn btn-primary scroll-to-contact" href="#contact">Más información</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="service-card">
+<img alt="Implantes Dentales" class="img-responsive" loading="lazy" src="images/service6.jpg"/>
+<div class="service-detail">
+<h3>Implantes Dentales</h3>
+<p>Solución permanente para dientes perdidos con tecnología de última generación.</p>
+<a class="btn btn-primary scroll-to-contact" href="#contact">Más información</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EQUIPO -->
+<section id="team">
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="section-title">
+<h2>Nuestro Equipo <small>Profesionales altamente calificados</small></h2>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="team-thumb">
+<div class="team-image">
+<img alt="Dr. Carlos Méndez" class="img-responsive" loading="lazy" src="images/doctor1.jpg"/>
+</div>
+<div class="team-info">
+<h3>Dr. Carlos Méndez</h3>
+<span>Cirujano Maxilofacial</span>
+<p>Especialista en implantes y cirugías complejas con más de 15 años de experiencia.</p>
+</div>
+<ul aria-label="Redes sociales" class="social-icon">
+<li><a aria-label="LinkedIn" class="fa fa-linkedin" href="#"><span class="sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="team-thumb">
+<div class="team-image">
+<img alt="Dra. Laura Gómez" class="img-responsive" loading="lazy" src="images/doctor2.jpg"/>
+</div>
+<div class="team-info">
+<h3>Dra. Laura Gómez</h3>
+<span>Ortodoncista</span>
+<p>Especialista en ortodoncia invisible y tratamientos para niños y adolescentes.</p>
+</div>
+<ul aria-label="Redes sociales" class="social-icon">
+<li><a aria-label="LinkedIn" class="fa fa-linkedin" href="#"><span class="sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="team-thumb">
+<div class="team-image">
+<img alt="Dra. Patricia Ramírez" class="img-responsive" loading="lazy" src="images/doctor3.jpg"/>
+</div>
+<div class="team-info">
+<h3>Dra. Patricia Ramírez</h3>
+<span>Endodoncista</span>
+<p>Especialista en tratamientos de conducto con microscopio dental.</p>
+</div>
+<ul aria-label="Redes sociales" class="social-icon">
+<li><a aria-label="LinkedIn" class="fa fa-linkedin" href="#"><span class="sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="team-thumb">
+<div class="team-image">
+<img alt="Dr. Andrés Fernández" class="img-responsive" loading="lazy" src="images/doctor4.jpg"/>
+</div>
+<div class="team-info">
+<h3>Dr. Andrés Fernández</h3>
+<span>Odontólogo General</span>
+<p>Especialista en odontología preventiva y restauradora para toda la familia.</p>
+</div>
+<ul aria-label="Redes sociales" class="social-icon">
+<li><a aria-label="LinkedIn" class="fa fa-linkedin" href="#"><span class="sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIOS (ahora carrusel) -->
+<section class="section-bg" id="testimonials">
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="section-title">
+<h2>Nuestros Pacientes <small>Lo que dicen sobre nosotros</small></h2>
+</div>
+</div>
+<div class="col-md-12">
+<div class="carousel slide" data-ride="carousel" id="testimoniosCarousel">
+<ol class="carousel-indicators">
+<li class="active" data-slide-to="0" data-target="#testimoniosCarousel"></li>
+<li data-slide-to="1" data-target="#testimoniosCarousel"></li>
+<li data-slide-to="2" data-target="#testimoniosCarousel"></li>
+</ol>
+<div class="carousel-inner">
+<div class="item active">
+<div class="testimonial-box text-center">
+<div class="tst-image">
+<img alt="Juan Pérez" class="img-responsive img-circle" loading="lazy" src="images/paciente1.jpg" style="width:100px; height:100px; object-fit:cover; margin:0 auto;"/>
+</div>
+<div class="tst-author mt-2">
+<h4>Juan Pérez</h4>
+<span>Implantes dentales</span>
+</div>
+<p>Excelente atención y profesionalismo. Los implantes que me colocaron son perfectos y el proceso fue indoloro. ¡Totalmente recomendados!</p>
+<div class="tst-rating">
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="testimonial-box text-center">
+<div class="tst-image">
+<img alt="María González" class="img-responsive img-circle" loading="lazy" src="images/paciente2.jpg" style="width:100px; height:100px; object-fit:cover; margin:0 auto;"/>
+</div>
+<div class="tst-author mt-2">
+<h4>María González</h4>
+<span>Ortodoncia invisible</span>
+</div>
+<p>Después de años de sentirme acomplejada por mis dientes, decidí probar con la ortodoncia invisible en Clinik Dent. ¡Los resultados superaron mis expectativas!</p>
+<div class="tst-rating">
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="testimonial-box text-center">
+<div class="tst-image">
+<img alt="Carlos Rodríguez" class="img-responsive img-circle" loading="lazy" src="images/paciente3.jpg" style="width:100px; height:100px; object-fit:cover; margin:0 auto;"/>
+</div>
+<div class="tst-author mt-2">
+<h4>Carlos Rodríguez</h4>
+<span>Urgencia dental</span>
+</div>
+<p>Tuve un accidente deportivo que me fracturó un diente. La atención de urgencias fue rápida, profesional y resolvieron mi problema en el momento. ¡Gracias!</p>
+<div class="tst-rating">
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+</div>
+</div>
+</div>
+</div>
+<a class="left carousel-control" data-slide="prev" href="#testimoniosCarousel">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" data-slide="next" href="#testimoniosCarousel">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+     $(document).ready(function(){
+         $('#testimoniosCarousel').carousel({
+             interval: 5000
+         });
+     });
+     </script>
+<!-- NOTICIAS Y PROMOCIONES -->
+<section id="news">
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="section-title">
+<h2>Noticias y Promociones <small>Mantente informado</small></h2>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="news-card">
+<div class="news-date">15 JUN 2023</div>
+<img alt="Nueva tecnología en implantes" class="img-responsive" loading="lazy" src="images/news1.jpg"/>
+<div class="news-detail">
+<h3>Lanzamos nueva tecnología en implantes dentales</h3>
+<p>Ahora ofrecemos implantes con superficie nanotecnológica que reducen el tiempo de osteointegración en un 40%.</p>
+<a class="btn btn-primary" href="#">Leer más</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="news-card">
+<div class="news-date">1 JUL 2023</div>
+<img alt="Promoción de blanqueamiento" class="img-responsive" loading="lazy" src="images/news2.jpg"/>
+<div class="news-detail">
+<h3>Promoción especial de blanqueamiento dental</h3>
+<p>Durante julio, obtén un 30% de descuento en nuestro tratamiento de blanqueamiento dental con tecnología LED.</p>
+<a class="btn btn-primary" href="#">Leer más</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="news-card">
+<div class="news-date">20 MAY 2023</div>
+<img alt="Consejos para salud dental" class="img-responsive" loading="lazy" src="images/news3.jpg"/>
+<div class="news-detail">
+<h3>Consejos para mantener una salud dental óptima</h3>
+<p>Nuestros especialistas comparten recomendaciones prácticas para cuidar tus dientes durante todo el año.</p>
+<a class="btn btn-primary" href="#">Leer más</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACTO -->
+<section class="section-bg" id="contact">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-12">
+<div class="section-title">
+<h2>Contacto <small>Agenda tu cita hoy mismo</small></h2>
+</div>
+<form action="/submit-form" id="contact-form" method="post" novalidate="" role="form">
+<div class="col-md-12 col-sm-12">
+<div class="form-group">
+<label class="sr-only" for="name">Nombre Completo</label>
+<input aria-required="true" class="form-control" id="name" name="name" placeholder="Nombre completo" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="sr-only" for="email">Correo Electrónico</label>
+<input aria-required="true" class="form-control" id="email" name="email" placeholder="Correo electrónico" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="sr-only" for="phone">Teléfono</label>
+<input aria-required="true" class="form-control" id="phone" name="phone" placeholder="Teléfono" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label class="sr-only" for="service">Servicio de interés</label>
+<select aria-required="true" class="form-control" id="service" name="service" required="">
+<option value="">Selecciona un servicio</option>
+<option value="odontologia-general">Odontología General</option>
+<option value="ortodoncia">Ortodoncia</option>
+<option value="cirugia-oral">Cirugía Oral</option>
+<option value="urgencias">Urgencias Odontológicas</option>
+<option value="estetica">Estética Dental</option>
+<option value="implantes">Implantes Dentales</option>
+</select>
+</div>
+<div class="form-group">
+<label class="sr-only" for="message">Mensaje</label>
+<textarea class="form-control" id="message" name="message" placeholder="Tu mensaje" rows="5"></textarea>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<button class="form-control btn btn-primary" name="send message" type="submit">Enviar Mensaje</button>
+</div>
+</form>
+</div>
+<div class="col-md-6 col-sm-12">
+<div class="contact-info">
+<h3>Información de contacto</h3>
+<p><i class="fa fa-map-marker"></i> <strong>Dirección:</strong> Calle 123 #45-67, Bogotá, Colombia</p>
+<p><i class="fa fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:+5712345678">+57 123 456 78</a></p>
+<p><i class="fa fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/573209773983">+57 320 977 3983</a></p>
+<p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@clinikdent.com">info@clinikdent.com</a></p>
+<h3 class="mt-4">Horario de atención</h3>
+<p><strong>Lunes a Viernes:</strong> 8:00 am - 8:00 pm</p>
+<p><strong>Sábados:</strong> 8:00 am - 4:00 pm</p>
+<p><strong>Urgencias:</strong> 24 horas / 7 días</p>
+<div class="map-container mt-4">
+<iframe allowfullscreen="" height="300" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.785244606093!2d-74.08390972468331!3d4.638129942336037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a3b0b0b0b0b%3A0xb0b0b0b0b0b0b0b0!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PQRS (al final, debajo de contacto) -->
+<section class="section-bg" id="pqrs-section">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-sm-12 mx-auto">
+<div class="section-title">
+<h2>PQRS <small>Peticiones, Quejas, Reclamos y Sugerencias</small></h2>
+</div>
+<button class="btn btn-outline-primary mb-3" data-target="#pqrsModal" data-toggle="modal">
+                              Enviar PQRS
+                         </button>
+<p>¿Tienes una petición, queja, reclamo o sugerencia? Haz clic en el botón para enviarnos tu mensaje. ¡Tu opinión es muy importante para nosotros!</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-6">
+<div class="footer-info">
+<div class="section-title">
+<h2>Clinik Dent</h2>
+</div>
+<p>Tu clínica odontológica de confianza en Bogotá. Ofrecemos tratamientos integrales con tecnología de punta y profesionales altamente calificados.</p>
+<ul aria-label="Redes sociales" class="social-icon">
+<li><a aria-label="Facebook" class="fa fa-facebook" href="#"><span class="sr-only">Facebook</span></a></li>
+<li><a aria-label="Instagram" class="fa fa-instagram" href="#"><span class="sr-only">Instagram</span></a></li>
+<li><a aria-label="Twitter" class="fa fa-twitter" href="#"><span class="sr-only">Twitter</span></a></li>
+<li><a aria-label="YouTube" class="fa fa-youtube" href="#"><span class="sr-only">YouTube</span></a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="footer-info">
+<div class="section-title">
+<h2>Enlaces rápidos</h2>
+</div>
+<ul class="footer-menu">
+<li><a class="smoothScroll" href="#services">Servicios</a></li>
+<li><a class="smoothScroll" href="#team">Nuestro Equipo</a></li>
+<li><a class="smoothScroll" href="#testimonials">Testimonios</a></li>
+<li><a class="smoothScroll" href="#news">Noticias</a></li>
+<li><a class="smoothScroll" href="#contact">Contacto</a></li>
+<li><a class="smoothScroll" href="#pqrs-section">PQRS</a></li>
+<li><a data-target="#loginModal" data-toggle="modal" href="#">Área de pacientes</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="footer-info newsletter-form">
+<div class="section-title">
+<h2>Boletín informativo</h2>
+</div>
+<p>Suscríbete para recibir promociones especiales y consejos de salud dental.</p>
+<form action="#" method="post" novalidate="">
+<div class="form-group">
+<label class="sr-only" for="newsletter-email">Correo Electrónico</label>
+<input aria-required="true" class="form-control" id="newsletter-email" name="email" placeholder="Tu correo electrónico" required="" type="email"/>
+</div>
+<button class="form-control btn btn-primary" name="submit" type="submit">Suscribirse</button>
+</form>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 text-center">
+<div class="copyright-text">
+<p>© <span id="current-year"></span> Clinik Dent. Todos los derechos reservados.</p>
+<p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Botón de WhatsApp -->
+<a aria-label="Contactar por WhatsApp" class="whatsapp-float" href="https://wa.me/573209773983" rel="noopener" target="_blank">
+<i class="fa fa-whatsapp"></i>
+</a>
+<!-- Modal de Login -->
+<div aria-hidden="true" aria-labelledby="loginModalLabel" class="modal fade" id="loginModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="loginModalLabel">Acceso a tu cuenta</h5>
+<button aria-label="Cerrar" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs login-tabs" id="loginTabs" role="tablist">
+<li class="nav-item">
+<a aria-controls="patient" aria-selected="true" class="nav-link active" data-toggle="tab" href="#patient" id="patient-tab" role="tab">Paciente</a>
+</li>
+<li class="nav-item">
+<a aria-controls="dentist" aria-selected="false" class="nav-link" data-toggle="tab" href="#dentist" id="dentist-tab" role="tab">Odontólogo</a>
+</li>
+<li class="nav-item">
+<a aria-controls="admin" aria-selected="false" class="nav-link" data-toggle="tab" href="#admin" id="admin-tab" role="tab">Administrador</a>
+</li>
+</ul>
+<div class="tab-content" id="loginTabsContent">
+<div aria-labelledby="patient-tab" class="tab-pane fade" id="patient" role="tabpanel">
+<form id="form-login-paciente">
+<div class="form-group mb-2">
+<label for="patient-email">Correo electrónico</label>
+<input class="form-control" id="patient-email" placeholder="Ingresa tu correo" type="email"/>
+</div>
+<div class="form-group mb-2">
+<label for="patient-password">Contraseña</label>
+<input class="form-control" id="patient-password" placeholder="Ingresa tu contraseña" type="password"/>
+</div>
+<div class="form-group form-check mb-2">
+<input class="form-check-input" id="patient-remember" type="checkbox"/>
+<label class="form-check-label" for="patient-remember">Recordarme</label>
+</div>
+<button class="btn btn-primary btn-block" type="submit">Iniciar sesión</button>
+<div class="text-center mt-2">
+<a data-dismiss="modal" data-target="#forgotModal" data-toggle="modal" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+</form>
+<div class="text-center mt-3">
+<p>¿No tienes cuenta? <a data-dismiss="modal" data-target="#registerModal" data-toggle="modal" href="#">Regístrate aquí</a></p>
+</div>
+</div>
+<div aria-labelledby="dentist-tab" class="tab-pane fade" id="dentist" role="tabpanel">
+<form id="form-login-odontologo">
+<div class="form-group mb-2">
+<label for="dentist-email">Correo electrónico</label>
+<input class="form-control" id="dentist-email" placeholder="Ingresa tu correo" type="email"/>
+</div>
+<div class="form-group mb-2">
+<label for="dentist-password">Contraseña</label>
+<input class="form-control" id="dentist-password" placeholder="Ingresa tu contraseña" type="password"/>
+</div>
+<div class="form-group form-check mb-2">
+<input class="form-check-input" id="dentist-remember" type="checkbox"/>
+<label class="form-check-label" for="dentist-remember">Recordarme</label>
+</div>
+<button class="btn btn-primary btn-block" type="submit">Iniciar sesión</button>
+<div class="text-center mt-2">
+<a data-dismiss="modal" data-target="#forgotModal" data-toggle="modal" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+</form>
+</div>
+<div aria-labelledby="admin-tab" class="tab-pane fade" id="admin" role="tabpanel">
+<form id="form-login-admin">
+<div class="form-group mb-2">
+<label for="admin-email">Correo electrónico</label>
+<input class="form-control" id="admin-email" placeholder="Ingresa tu correo" type="email"/>
+</div>
+<div class="form-group mb-2">
+<label for="admin-password">Contraseña</label>
+<input class="form-control" id="admin-password" placeholder="Ingresa tu contraseña" type="password"/>
+</div>
+<div class="form-group form-check mb-2">
+<input class="form-check-input" id="admin-remember" type="checkbox"/>
+<label class="form-check-label" for="admin-remember">Recordarme</label>
+</div>
+<button class="btn btn-primary btn-block" type="submit">Iniciar sesión</button>
+<div class="text-center mt-2">
+<a data-dismiss="modal" data-target="#forgotModal" data-toggle="modal" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal de Registro -->
+<div aria-hidden="true" aria-labelledby="registerModalLabel" class="modal fade" id="registerModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="registerModalLabel">Registro de paciente</h5>
+<button aria-label="Cerrar" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form>
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="register-firstname">Nombre</label>
+<input class="form-control" id="register-firstname" placeholder="Ingresa tu nombre" required="" type="text"/>
+</div>
+<div class="form-group col-md-6">
+<label for="register-lastname">Apellido</label>
+<input class="form-control" id="register-lastname" placeholder="Ingresa tu apellido" required="" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="register-tipo-documento">Tipo de documento</label>
+<select class="form-control" id="register-tipo-documento" required="">
+<option value="">Selecciona...</option>
+<option value="CC">Cédula de ciudadanía</option>
+<option value="TI">Tarjeta de identidad</option>
+<option value="CE">Cédula de extranjería</option>
+<option value="PA">Pasaporte</option>
+</select>
+</div>
+<div class="form-group col-md-6">
+<label for="register-numero-documento">Número de documento</label>
+<input class="form-control" id="register-numero-documento" placeholder="Número de documento" required="" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="register-email">Correo electrónico</label>
+<input class="form-control" id="register-email" placeholder="Ingresa tu correo" required="" type="email"/>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="register-password">Contraseña</label>
+<input class="form-control" id="register-password" placeholder="Crea una contraseña" required="" type="password"/>
+</div>
+<div class="form-group col-md-6">
+<label for="register-confirm">Confirmar contraseña</label>
+<input class="form-control" id="register-confirm" placeholder="Repite tu contraseña" required="" type="password"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="register-phone">Teléfono</label>
+<input class="form-control" id="register-phone" placeholder="Ingresa tu teléfono" required="" type="tel"/>
+</div>
+<div class="form-group col-md-6">
+<label for="register-direccion">Dirección</label>
+<input class="form-control" id="register-direccion" placeholder="Ingresa tu dirección" required="" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="register-fecha-nacimiento">Fecha de nacimiento</label>
+<input class="form-control" id="register-fecha-nacimiento" required="" type="date"/>
+</div>
+<div class="form-group form-check">
+<input class="form-check-input" id="register-terms" required="" type="checkbox"/>
+<label class="form-check-label" for="register-terms">Acepto los <a href="#">términos y condiciones</a></label>
+</div>
+<button class="btn btn-primary btn-block" type="submit">Registrarme</button>
+</form>
+<div class="text-center mt-3">
+<p>¿Ya tienes cuenta? <a data-dismiss="modal" data-target="#loginModal" data-toggle="modal" href="#">Inicia sesión aquí</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal de Olvidé mi contraseña -->
+<div aria-hidden="true" aria-labelledby="forgotModalLabel" class="modal fade" id="forgotModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="forgotModalLabel">Recuperar contraseña</h5>
+<button aria-label="Cerrar" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form id="forgot-form-step1">
+<div class="form-group">
+<label for="forgot-email">Correo electrónico</label>
+<input class="form-control" id="forgot-email" placeholder="Ingresa tu correo registrado" type="email"/>
+</div>
+<button class="btn btn-primary btn-block" type="submit">Enviar código de verificación</button>
+</form>
+<form id="forgot-form-step2" style="display:none;">
+<div class="form-group">
+<label for="forgot-code">Código de verificación</label>
+<input class="form-control" id="forgot-code" placeholder="Ingresa el código recibido en tu correo" type="text"/>
+</div>
+<button class="btn btn-primary btn-block" id="btn-verificar-codigo" type="button">Verificar código</button>
+</form>
+<form id="forgot-form-step3" style="display:none;">
+<div class="form-group">
+<label for="forgot-new-password">Nueva contraseña</label>
+<input class="form-control" id="forgot-new-password" placeholder="Nueva contraseña" type="password"/>
+</div>
+<div class="form-group">
+<label for="forgot-confirm-password">Confirmar contraseña</label>
+<input class="form-control" id="forgot-confirm-password" placeholder="Confirmar contraseña" type="password"/>
+</div>
+<button class="btn btn-primary btn-block" id="btn-cambiar-password" type="button">Cambiar contraseña</button>
+</form>
+<div class="text-center mt-3">
+<p><a data-dismiss="modal" data-target="#loginModal" data-toggle="modal" href="#">Volver a inicio de sesión</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal PQRS -->
+<div aria-hidden="true" aria-labelledby="pqrsModalLabel" class="modal fade" id="pqrsModal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="pqrsModalLabel">Enviar PQRS</h5>
+<button aria-label="Cerrar" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body">
+<form id="pqrsForm">
+<div class="form-group">
+<label for="pqrs-nombre">Nombre</label>
+<input class="form-control" id="pqrs-nombre" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="pqrs-email">Correo electrónico</label>
+<input class="form-control" id="pqrs-email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="pqrs-tipo">Tipo de PQRS</label>
+<select class="form-control" id="pqrs-tipo" required="">
+<option value="">Seleccione una opción</option>
+<option value="Petición">Petición</option>
+<option value="Queja">Queja</option>
+<option value="Reclamo">Reclamo</option>
+<option value="Sugerencia">Sugerencia</option>
+</select>
+</div>
+<div class="form-group">
+<label for="pqrs-mensaje">Mensaje</label>
+<textarea class="form-control" id="pqrs-mensaje" required="" rows="4"></textarea>
+</div>
+<button class="btn btn-primary btn-block" type="submit">Enviar</button>
+</form>
+<div class="alert alert-success mt-3" id="pqrs-success" style="display:none;">¡Tu PQRS ha sido enviada!</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+<!-- Scripts adicionales -->
+<script>
+          // Actualizar año de copyright automáticamente
+          document.getElementById('current-year').textContent = new Date().getFullYear();
+
+          // Validación de formularios
+          (function() {
+               'use strict';
+               window.addEventListener('load', function() {
+                    var forms = document.getElementsByClassName('needs-validation');
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                         form.addEventListener('submit', function(event) {
+                              if (form.checkValidity() === false) {
+                                   event.preventDefault();
+                                   event.stopPropagation();
+                              }
+                              form.classList.add('was-validated');
+                         }, false);
+                    });
+               }, false);
+          })();
+
+          // Inicializar carruseles
+          $(document).ready(function(){
+               $(".home-slider").owlCarousel({
+                    items: 1,
+                    loop: true,
+                    autoplay: true,
+                    nav: true,
+                    dots: true,
+                    animateOut: 'fadeOut'
+               });
+               
+               $(".owl-client").owlCarousel({
+                    items: 3,
+                    loop: true,
+                    autoplay: true,
+                    nav: true,
+                    dots: false,
+                    responsive: {
+                         0: { items: 1 },
+                         600: { items: 2 },
+                         1000: { items: 3 }
+                    }
+               });
+          });
+
+          // Manejo de modales
+          $('#forgotModal').on('show.bs.modal', function (event) {
+               var button = $(event.relatedTarget);
+               var type = button.data('type') || 'patient';
+               $('#forgot-email').attr('placeholder', 'Ingresa tu correo de ' + type);
+               // Limpiar mensajes previos
+               $('#forgot-success').remove();
+               $('#forgot-error').remove();
+          });
+
+          // Botón de WhatsApp
+          $('.whatsapp-float').click(function(){
+               ga('send', 'event', 'Contact', 'click', 'WhatsApp');
+          });
+
+          // Scroll suave a contacto desde servicios
+          $(document).on('click', '.scroll-to-contact', function(e) {
+            e.preventDefault();
+            var target = $('#contact');
+            if(target.length) {
+              $('html, body').animate({ scrollTop: target.offset().top - 60 }, 600);
+            }
+          });
+
+          // Cambiar todos los botones "Más información" de servicios para que apunten a #contact
+          $(document).ready(function() {
+            $(".service-card .btn.btn-primary").attr("href", "#contact").addClass("scroll-to-contact");
+          });
+
+          // Envío de PQRS
+          $(document).ready(function() {
+            var pqrsForm = document.getElementById('pqrsForm');
+            if (pqrsForm) {
+              pqrsForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const nombre = document.getElementById('pqrs-nombre').value;
+                const email = document.getElementById('pqrs-email').value;
+                const tipo = document.getElementById('pqrs-tipo').value;
+                const mensaje = document.getElementById('pqrs-mensaje').value;
+                try {
+                  if(window.agregarPQRS) {
+                    await window.agregarPQRS({ nombre, email, tipo, mensaje, fecha: new Date().toISOString() });
+                  }
+                  document.getElementById('pqrs-success').style.display = 'block';
+                  pqrsForm.reset();
+                  setTimeout(function(){
+                    $('#pqrsModal').modal('hide');
+                    document.getElementById('pqrs-success').style.display = 'none';
+                  }, 2000);
+                } catch (err) {
+                  alert('Error al enviar PQRS: ' + err.message);
+                }
+              });
+            }
+          });
+     </script>
+<!-- Recuperación de contraseña Firebase -->
+<script type="module">
+     // --- Recuperación de contraseña usando backend personalizado ---
+     // Cambia esta URL si tu backend está en otro host o puerto
+     const BACKEND_URL = "http://localhost:3001";
+
+     let emailRecuperacion = null;
+
+     document.addEventListener('DOMContentLoaded', function() {
+       const formStep1 = document.getElementById('forgot-form-step1');
+       const formStep2 = document.getElementById('forgot-form-step2');
+       const formStep3 = document.getElementById('forgot-form-step3');
+       const btnVerificar = document.getElementById('btn-verificar-codigo');
+       const btnCambiar = document.getElementById('btn-cambiar-password');
+
+       // Paso 1: Enviar código al correo
+       if (formStep1) {
+         formStep1.addEventListener('submit', async function(e) {
+           e.preventDefault();
+           $("#forgot-success").remove();
+           $("#forgot-error").remove();
+           const email = document.getElementById('forgot-email').value;
+           if (!email) return;
+           try {
+             const res = await fetch(`${BACKEND_URL}/send-code`, {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify({ email })
+             });
+             const data = await res.json();
+             if (res.ok) {
+               emailRecuperacion = email;
+               $(formStep1).after('<div id="forgot-success" class="alert alert-success mt-3">Código enviado a tu correo.</div>');
+               formStep1.style.display = 'none';
+               formStep2.style.display = 'block';
+             } else {
+               let msg = data.error || 'No se pudo enviar el código.';
+               $(formStep1).after('<div id="forgot-error" class="alert alert-danger mt-3">'+msg+'</div>');
+             }
+           } catch (error) {
+             let msg = 'Error al conectar con el servidor: ' + (error.message || 'Intenta de nuevo.');
+             $(formStep1).after('<div id="forgot-error" class="alert alert-danger mt-3">'+msg+'</div>');
+           }
+         });
+       }
+
+       // Paso 2: Verificar código
+       if (btnVerificar) {
+         btnVerificar.addEventListener('click', async function() {
+           $("#forgot-success").remove();
+           $("#forgot-error").remove();
+           const code = document.getElementById('forgot-code').value;
+           if (!emailRecuperacion) {
+             $(formStep2).after('<div id="forgot-error" class="alert alert-danger mt-3">Primero ingresa tu correo y solicita el código.</div>');
+             return;
+           }
+           try {
+             const res = await fetch(`${BACKEND_URL}/verify-code`, {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify({ email: emailRecuperacion, code })
+             });
+             const data = await res.json();
+             if (res.ok && data.success) {
+               formStep2.style.display = 'none';
+               formStep3.style.display = 'block';
+             } else {
+               let msg = data.error || 'Código incorrecto. Intenta de nuevo.';
+               $(formStep2).after('<div id="forgot-error" class="alert alert-danger mt-3">'+msg+'</div>');
+             }
+           } catch (error) {
+             let msg = 'Error al conectar con el servidor: ' + (error.message || 'Intenta de nuevo.');
+             $(formStep2).after('<div id="forgot-error" class="alert alert-danger mt-3">'+msg+'</div>');
+           }
+         });
+       }
+
+       // Paso 3: Cambiar contraseña
+       if (btnCambiar) {
+         btnCambiar.addEventListener('click', async function() {
+           $("#forgot-success").remove();
+           $("#forgot-error").remove();
+           const pass1 = document.getElementById('forgot-new-password').value;
+           const pass2 = document.getElementById('forgot-confirm-password').value;
+           if (!pass1 || !pass2) {
+             $(formStep3).after('<div id="forgot-error" class="alert alert-danger mt-3">Debes ingresar y confirmar la nueva contraseña.</div>');
+             return;
+           }
+           if (pass1 !== pass2) {
+             $(formStep3).after('<div id="forgot-error" class="alert alert-danger mt-3">Las contraseñas no coinciden.</div>');
+             return;
+           }
+           try {
+             const res = await fetch(`${BACKEND_URL}/change-password`, {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify({ email: emailRecuperacion, code: document.getElementById('forgot-code').value, newPassword: pass1 })
+             });
+             const data = await res.json();
+             if (res.ok && data.success) {
+               $(formStep3).after('<div id="forgot-success" class="alert alert-success mt-3">Contraseña cambiada exitosamente.</div>');
+               setTimeout(function(){
+                 $('#forgotModal').modal('hide');
+                 formStep1.reset();
+                 formStep2.reset();
+                 formStep3.reset();
+                 formStep1.style.display = 'block';
+                 formStep2.style.display = 'none';
+                 formStep3.style.display = 'none';
+               }, 2500);
+             } else {
+               let msg = data.error || 'No se pudo cambiar la contraseña.';
+               $(formStep3).after('<div id="forgot-error" class="alert alert-danger mt-3">'+msg+'</div>');
+             }
+           } catch (error) {
+             let msg = 'Error al conectar con el servidor: ' + (error.message || 'Intenta de nuevo.');
+             $(formStep3).after('<div id="forgot-error" class="alert alert-danger mt-3">'+msg+'</div>');
+           }
+         });
+       }
+
+       // Al abrir el modal, reiniciar pasos
+       $('#forgotModal').on('show.bs.modal', function () {
+         $("#forgot-success").remove();
+         $("#forgot-error").remove();
+         if(formStep1 && formStep2 && formStep3) {
+           formStep1.reset();
+           formStep2.reset();
+           formStep3.reset();
+           formStep1.style.display = 'block';
+           formStep2.style.display = 'none';
+           formStep3.style.display = 'none';
+         }
+         emailRecuperacion = null;
+       });
+     });
+     </script>
+<script type="module">
+  // Importar los SDKs de Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+  import { getFirestore, collection, addDoc, onSnapshot, setDoc, doc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+  // Configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyDZDyoYOm-P8KJCs-Jukt_eaOiYKIrAoj4",
+    authDomain: "clinikdent-f39c3.firebaseapp.com",
+    projectId: "clinikdent-f39c3",
+    storageBucket: "clinikdent-f39c3.firebasestorage.app",
+    messagingSenderId: "543210066190",
+    appId: "1:543210066190:web:0cba6a0ada95da1a4e875f",
+    measurementId: "G-Q9CXVCY7VR"
+  };
+
+  // Inicializar Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  // Crear administrador por defecto si no existe
+  async function crearAdminDefault() {
+    try {
+      // Intenta crear el usuario solo si no existe
+      await createUserWithEmailAndPassword(auth, "camilafontalvolopez@gmail.com", "Admin123*");
+      // Guarda datos en la colección administradores
+      await setDoc(doc(db, "administradores", "camilafontalvolopez@gmail.com"), {
+        email: "camilafontalvolopez@gmail.com",
+        nombre: "Camila Fontalvo",
+        rol: "admin"
+      });
+      console.log("Administrador creado");
+    } catch (e) {
+      if (e.code === 'auth/email-already-in-use') {
+        // Ya existe, solo asegúrate de que esté en la colección
+        await setDoc(doc(db, "administradores", "camilafontalvolopez@gmail.com"), {
+          email: "camilafontalvolopez@gmail.com",
+          nombre: "Camila Fontalvo",
+          rol: "admin"
+        });
+        console.log("Administrador ya existe");
+      } else {
+        console.error(e);
+      }
+    }
+  }
+  crearAdminDefault();
+
+  // Crear otro administrador por defecto si no existe
+  async function crearAdminDaniel() {
+    try {
+      await createUserWithEmailAndPassword(auth, "munozdanielfelipe8@gmail.com", "Admin123*");
+      await setDoc(doc(db, "administradores", "munozdanielfelipe8@gmail.com"), {
+        email: "munozdanielfelipe8@gmail.com",
+        nombre: "Daniel Muñoz",
+        rol: "admin"
+      });
+      console.log("Administrador Daniel Muñoz creado");
+    } catch (e) {
+      if (e.code === 'auth/email-already-in-use') {
+        await setDoc(doc(db, "administradores", "munozdanielfelipe8@gmail.com"), {
+          email: "munozdanielfelipe8@gmail.com",
+          nombre: "Daniel Muñoz",
+          rol: "admin"
+        });
+        console.log("Administrador Daniel Muñoz ya existe");
+      } else {
+        console.error(e);
+      }
+    }
+  }
+  crearAdminDaniel();
+
+  // Registro de pacientes
+  document.querySelector('#registerModal form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('register-firstname').value;
+    const apellido = document.getElementById('register-lastname').value;
+    const tipoDoc = document.getElementById('register-tipo-documento').value;
+    const numDoc = document.getElementById('register-numero-documento').value;
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
+    const telefono = document.getElementById('register-phone').value;
+    const direccion = document.getElementById('register-direccion').value;
+    const fechaNacimiento = document.getElementById('register-fecha-nacimiento').value;
+
+    // Validar que no exista paciente con el mismo correo o número de documento
+    try {
+      // Buscar por email
+      const qEmail = query(collection(db, "pacientes"), where("email", "==", email));
+      const qDoc = query(collection(db, "pacientes"), where("numDoc", "==", numDoc));
+      const [snapEmail, snapDoc] = await Promise.all([
+        getDocs(qEmail),
+        getDocs(qDoc)
+      ]);
+      if (!snapEmail.empty) {
+        alert("Ya existe un paciente registrado con este correo electrónico.");
+        return;
+      }
+      if (!snapDoc.empty) {
+        alert("Ya existe un paciente registrado con este número de documento.");
+        return;
+      }
+      // Si no existen, proceder con el registro
+      const cred = await createUserWithEmailAndPassword(auth, email, password);
+      await addDoc(collection(db, "pacientes"), {
+        nombre,
+        apellido,
+        tipoDoc,
+        numDoc,
+        email,
+        telefono,
+        direccion,
+        fechaNacimiento,
+        uid: cred.user.uid
+      });
+      // Iniciar sesión automáticamente y redirigir al dashboard de paciente
+      await signInWithEmailAndPassword(auth, email, password);
+      window.location.href = "dashboard-paciente.html";
+    } catch (error) {
+      alert('Error en el registro: ' + error.message);
+    }
+  });
+
+  // Inicio de sesión (paciente, odontólogo, admin)
+  document.querySelectorAll('#loginModal form').forEach(form => {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type=email]').value;
+      const password = this.querySelector('input[type=password]').value;
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        if (email === "camilafontalvolopez@gmail.com") {
+          window.location.href = "dashboard-admin.html";
+        } else if (email.endsWith("@clinikdent.com")) {
+          // Ejemplo: juanmartinez@clinikdent.com
+          window.location.href = "dashboard-odontologo.html";
+        } else {
+          window.location.href = "dashboard-paciente.html";
+        }
+      } catch (error) {
+        alert('Error al iniciar sesión: ' + error.message);
+      }
+    });
+  });
+
+  // Funciones para pacientes
+  window.agregarPaciente = async (paciente) => {
+    return await addDoc(collection(db, "pacientes"), paciente);
+  };
+  window.escucharPacientes = (callback) => {
+    return onSnapshot(collection(db, "pacientes"), (snapshot) => {
+      const pacientes = [];
+      snapshot.forEach(doc => pacientes.push({ id: doc.id, ...doc.data() }));
+      callback(pacientes);
+    });
+  };
+
+  // Funciones para odontólogos
+  window.agregarOdontologo = async (odontologo) => {
+    return await addDoc(collection(db, "odontologos"), odontologo);
+  };
+  window.escucharOdontologos = (callback) => {
+    return onSnapshot(collection(db, "odontologos"), (snapshot) => {
+      const odontologos = [];
+      snapshot.forEach(doc => odontologos.push({ id: doc.id, ...doc.data() }));
+      callback(odontologos);
+    });
+  };
+
+  // Funciones para administradores
+  window.agregarAdministrador = async (admin) => {
+    return await addDoc(collection(db, "administradores"), admin);
+  };
+  window.escucharAdministradores = (callback) => {
+    return onSnapshot(collection(db, "administradores"), (snapshot) => {
+      const administradores = [];
+      snapshot.forEach(doc => administradores.push({ id: doc.id, ...doc.data() }));
+      callback(administradores);
+    });
+  };
+
+  // Funciones para PQRS
+  window.agregarPQRS = async (pqrs) => {
+    return await addDoc(collection(db, "pqrs"), pqrs);
+  };
+  window.escucharPQRS = (callback) => {
+    return onSnapshot(collection(db, "pqrs"), (snapshot) => {
+      const pqrsList = [];
+      snapshot.forEach(doc => pqrsList.push({ id: doc.id, ...doc.data() }));
+      callback(pqrsList);
+    });
+  };
+</script>
+<script type="module">
+// Cerrar sesión en dashboard-admin.html
+if (window.location.pathname.endsWith('dashboard-admin.html')) {
+  document.addEventListener('DOMContentLoaded', function() {
+    const logoutLink = document.querySelector('a[href="index.html"]');
+    if (logoutLink) {
+      logoutLink.addEventListener('click', async function(e) {
+        e.preventDefault();
+        try {
+          const { getAuth, signOut } = await import('https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js');
+          const auth = getAuth();
+          await signOut(auth);
+        } catch (e) {}
+        window.location.href = 'index.html';
+      });
+    }
+  });
+}
+</script>
+<div class="modal-backdrop fade show"></div></body>
+</html>

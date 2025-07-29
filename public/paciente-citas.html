@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Mis Citas | Clinik Dent</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/templatemo-style.css" rel="stylesheet"/>
+<style>
+        body { background: #f7f9fb; }
+        .dashboard-box { background: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); padding: 30px; margin-top: 40px; }
+        .dashboard-header { margin-bottom: 30px; text-align: center; }
+        .table th, .table td { vertical-align: middle !important; text-align: center; }
+        .btn-xs { padding: 3px 10px; font-size: 13px; }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/><style>
+        .modal-content {
+            background-color: #f9f9f9 !important;
+        }
+        .tab-pane, .form-control, .modal-content, label {
+            color: #212529 !important;
+        }
+        .modal {
+            z-index: 1055 !important;
+        }
+        </style></head>
+<body>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="dashboard-paciente.html">Clinik Dent</a>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="index.html"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<div class="dashboard-box">
+<div class="dashboard-header">
+<a class="btn btn-default" href="dashboard-paciente.html" style="float:right;margin-bottom:10px;"><i class="fa fa-arrow-left"></i> Volver</a>
+<h2>Mis Citas</h2>
+<p>Consulta tus próximas citas, historial y agenda una nueva cita.</p>
+</div>
+<button class="btn btn-success" data-target="#modalAgendar" data-toggle="modal">Agendar nueva cita</button>
+<table class="table table-bordered" id="tabla-citas-paciente" style="margin-top:20px;">
+<thead>
+<tr><th>Odontólogo</th><th>Fecha</th><th>Hora</th><th>Estado</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+<!-- Modal Agendar Cita -->
+<div class="modal fade" id="modalAgendar" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Agendar Nueva Cita</h4>
+<button class="close" data-dismiss="modal" type="button"><span>×</span></button>
+</div>
+<div class="modal-body">
+<form id="formAgendarCita">
+<div class="form-group">
+<label>Odontólogo</label>
+<select class="form-control" id="cita-odontologo" required=""></select>
+</div>
+<div class="form-group">
+<label>Fecha</label>
+<input class="form-control" id="cita-fecha" required="" type="date"/>
+</div>
+<div class="form-group">
+<label>Hora</label>
+<input class="form-control" id="cita-hora" required="" type="time"/>
+</div>
+<button class="btn btn-success" type="submit">Agendar</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/paciente-citas.js" type="module"></script>
+<div class="modal-backdrop fade show"></div></body>
+</html>

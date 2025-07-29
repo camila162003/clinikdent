@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Mis Pacientes | Clinik Dent</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/templatemo-style.css" rel="stylesheet"/>
+<style>
+        body { background: #f7f9fb; }
+        .dashboard-box { background: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); padding: 30px; margin-top: 40px; }
+        .dashboard-header { margin-bottom: 30px; }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/><style>
+        .modal-content {
+            background-color: #f9f9f9 !important;
+        }
+        .tab-pane, .form-control, .modal-content, label {
+            color: #212529 !important;
+        }
+        .modal {
+            z-index: 1055 !important;
+        }
+        </style></head>
+<body>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="dashboard-odontologo.html">Clinik Dent</a>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="index.html"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<div class="dashboard-box">
+<div class="dashboard-header">
+<a class="btn btn-default" href="dashboard-odontologo.html" style="float:right;margin-bottom:10px;"><i class="fa fa-arrow-left"></i> Volver al panel</a>
+<h2>Mis Pacientes</h2>
+<p>Consulta y gestiona la información de tus pacientes.</p>
+</div>
+<table class="table table-bordered" id="tabla-pacientes-odontologo">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Documento</th>
+<th>Email</th>
+<th>Teléfono</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<!-- Modal para ver citas del paciente -->
+<div class="modal fade" id="modalCitasPaciente" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Citas del Paciente</h4>
+<button class="close" data-dismiss="modal" type="button"><span>×</span></button>
+</div>
+<div class="modal-body">
+<table class="table table-bordered" id="tabla-citas-paciente">
+<thead>
+<tr><th>Fecha</th><th>Hora</th><th>Estado</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
+    import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
+    import { getFirestore, collection, getDocs, query, where } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+    const firebaseConfig = {
+      apiKey: "AIzaSyDZDyoYOm-P8KJCs-Jukt_eaOiYKIrAoj4",
+      authDomain: "clinikdent-f39c3.firebaseapp.com",
+      projectId: "clinikdent-f39c3",
+      storageBucket: "clinikdent-f39c3.firebasestorage.app",
+      messagingSenderId: "543210066190",
+      appId: "1:543210066190:web:0cba6a0ada95da1a4e875f",
+      measurementId: "G-Q9CXVCY7VR"
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    onAuthStateChanged(auth, async user => {
+      if (!user) {
+        window.location.replace('index.html');
+        return;
+      }
+      // Cargar pacientes
+      const tbody = document.querySelector('#tabla-pacientes-odontologo tbody');
+      tbody.innerHTML = '';
+      const snapshot = await getDocs(collection(db, 'pacientes'));
+      snapshot.forEach(docSnap => {
+        const data = docSnap.data();
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${data.nombre || ''} ${data.apellidos || ''}</td><td>${data.numeroDocumento || ''}</td><td>${data.email || ''}</td><td>${data.telefono || ''}</td><td><button class='btn btn-info btn-xs btn-ver-citas' data-email='${data.email}'>Ver</button></td>`;
+        tbody.appendChild(tr);
+      });
+      // Evento para ver citas del paciente
+      tbody.addEventListener('click', async function(e) {
+        if (e.target.classList.contains('btn-ver-citas')) {
+          const emailPaciente = e.target.getAttribute('data-email');
+          const citasTbody = document.querySelector('#tabla-citas-paciente tbody');
+          citasTbody.innerHTML = '';
+          // Buscar citas de este paciente
+          const q = query(collection(db, 'citas'), where('pacienteEmail', '==', emailPaciente));
+          const snapshotCitas = await getDocs(q);
+          snapshotCitas.forEach(docSnap => {
+            const data = docSnap.data();
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${data.fecha || ''}</td><td>${data.hora || ''}</td><td>${data.estado || 'Pendiente'}</td>`;
+            citasTbody.appendChild(tr);
+          });
+          $('#modalCitasPaciente').modal('show');
+        }
+      });
+    });
+    </script>
+<div class="modal-backdrop fade show"></div></body>
+</html>

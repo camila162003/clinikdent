@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Dashboard Paciente | Clinik Dent</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/templatemo-style.css" rel="stylesheet"/>
+<style>
+        body { background: #f7f9fb; }
+        .dashboard-box { background: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); padding: 30px; margin-top: 40px; }
+        .dashboard-header { margin-bottom: 30px; }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/><style>
+        .modal-content {
+            background-color: #f9f9f9 !important;
+        }
+        .tab-pane, .form-control, .modal-content, label {
+            color: #212529 !important;
+        }
+        .modal {
+            z-index: 1055 !important;
+        }
+        </style></head>
+<body>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<a class="navbar-brand" href="#">Clinik Dent</a>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#" id="logout-link"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<div class="dashboard-box">
+<div class="dashboard-header" id="paciente-header">
+<div style="background: linear-gradient(90deg,#6fd1e8 60%,#b2f0c7 100%); border-radius: 18px; padding: 24px 16px 16px 16px; margin-bottom: 18px; display: flex; align-items: center;">
+<img alt="avatar" src="images/user-avatar.png" style="width:70px;height:70px;border-radius:50%;object-fit:cover;margin-right:24px;box-shadow:0 2px 8px #00a3e133;"/>
+<div>
+<h2 id="nombre-paciente" style="margin:0;font-weight:700;color:#fff;font-size:2em;">Paciente</h2>
+<span id="doc-paciente" style="color:#eafaf1;font-size:1.1em;"></span>
+</div>
+</div>
+<p style="margin-top:0;">Consulta y gestiona tus citas, tratamientos y perfil.</p>
+</div>
+<script type="module">
+            import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
+            import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
+            import { getFirestore, collection, getDocs, query, where } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+            const firebaseConfig = {
+              apiKey: "AIzaSyDZDyoYOm-P8KJCs-Jukt_eaOiYKIrAoj4",
+              authDomain: "clinikdent-f39c3.firebaseapp.com",
+              projectId: "clinikdent-f39c3",
+              storageBucket: "clinikdent-f39c3.appspot.com",
+              messagingSenderId: "543210066190",
+              appId: "1:543210066190:web:0cba6a0ada95da1a4e875f",
+              measurementId: "G-Q9CXVCY7VR"
+            };
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+            const db = getFirestore(app);
+
+            // Manejar estado de autenticación y mostrar datos
+            onAuthStateChanged(auth, async user => {
+              if (user) {
+                const q = query(collection(db, 'pacientes'), where('email', '==', user.email));
+                const snapshot = await getDocs(q);
+                if (!snapshot.empty) {
+                  const data = snapshot.docs[0].data();
+                  document.getElementById('nombre-paciente').textContent = `${data.nombre || ''} ${data.apellidos || ''}`.trim() || user.email;
+                  document.getElementById('doc-paciente').textContent = data.numeroDocumento ? `CC: ${data.numeroDocumento}` : '';
+                } else {
+                  document.getElementById('nombre-paciente').textContent = user.email;
+                }
+              } else {
+                window.location.replace('index.html');
+              }
+            });
+
+            // Cerrar sesión
+            document.getElementById('logout-link').addEventListener('click', async function(e) {
+              e.preventDefault();
+              await signOut(auth);
+              window.location.replace('index.html');
+            });
+
+            // Previene volver atrás tras logout
+            window.addEventListener('pageshow', function(event) {
+              if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+                window.location.replace('index.html');
+              }
+            });
+            </script>
+<div class="row">
+<div class="col-md-4 col-sm-6">
+<div class="panel panel-info">
+<div class="panel-heading"><i class="fa fa-calendar"></i> Mis Citas</div>
+<div class="panel-body">
+<p>Ver próximas citas, historial y agendar nueva cita.</p>
+<a class="btn btn-primary btn-block" href="paciente-citas.html">Ver citas</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="panel panel-info">
+<div class="panel-heading"><i class="fa fa-file-text"></i> Mis Tratamientos</div>
+<div class="panel-body">
+<p>Revisa el estado y detalles de tus tratamientos.</p>
+<a class="btn btn-primary btn-block" href="paciente-tratamientos.html">Ver tratamientos</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6">
+<div class="panel panel-info">
+<div class="panel-heading"><i class="fa fa-user"></i> Mi Perfil</div>
+<div class="panel-body">
+<p>Gestiona tus datos personales y preferencias.</p>
+<a class="btn btn-primary btn-block" href="paciente-perfil.html">Opciones de perfil</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Carrusel de pacientes -->
+<div class="dashboard-box" style="margin-top:32px;">
+<h3 style="margin-bottom:18px;">Nuestros Pacientes</h3>
+<div class="carousel slide" data-interval="2500" data-ride="carousel" id="pacientesCarousel">
+<div class="carousel-inner">
+<div class="item active">
+<div style="display:flex;align-items:center;justify-content:center;flex-direction:column;">
+<img alt="Paciente 1" src="images/paciente1.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px #00a3e133;"/>
+<h4 style="margin-top:16px;">María G.</h4>
+<p style="color:#888;">“Excelente atención y resultados, ¡muy recomendados!”</p>
+</div>
+</div>
+<div class="item">
+<div style="display:flex;align-items:center;justify-content:center;flex-direction:column;">
+<img alt="Paciente 2" src="images/paciente2.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px #00a3e133;"/>
+<h4 style="margin-top:16px;">Carlos P.</h4>
+<p style="color:#888;">“Me sentí muy cómodo y seguro durante mi tratamiento.”</p>
+</div>
+</div>
+<div class="item">
+<div style="display:flex;align-items:center;justify-content:center;flex-direction:column;">
+<img alt="Paciente 3" src="images/paciente3.jpg" style="width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px #00a3e133;"/>
+<h4 style="margin-top:16px;">Laura S.</h4>
+<p style="color:#888;">“El equipo es muy profesional y amable.”</p>
+</div>
+</div>
+</div>
+<a class="left carousel-control" data-slide="prev" href="#pacientesCarousel">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" data-slide="next" href="#pacientesCarousel">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Eliminado script duplicado de logout, ahora todo está en el script principal -->
+<div class="modal-backdrop fade show"></div></body>
+</html>
